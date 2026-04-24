@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  
+  --color-bg-geometric: #F0F4F8;
+  --color-primary-geometric: #2C5282;
+  --color-accent-geometric: #4299E1;
+  --color-success-geometric: #48BB78;
+  --color-card-geometric: #FFFFFF;
+  --color-text-main: #2D3748;
+  --color-text-muted: #718096;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-geometric);
+    color: var(--color-text-main);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .geometric-card {
+    background: var(--color-card-geometric);
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid #E2E8F0;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .geometric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-item-geometric {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+
+  .nav-item-geometric.active {
+    background: var(--color-primary-geometric);
+    color: white;
+  }
+
+  .btn-geometric-primary {
+    background: var(--color-primary-geometric);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: opacity 0.2s;
+  }
+
+  .btn-geometric-primary:hover {
+    opacity: 0.9;
+  }
+}
